@@ -76,6 +76,27 @@ body {
     margin-top: 30px;
 }
 
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  transform: scale(2);
+  padding: 10px;
+}
+
+#show_pass{
+    margin-top: 30px;
+    margin-right: 15px;
+}
+
+#show_pass_text{
+    font-size: 35px;
+    color: black;
+}
+
 .login_field {
     display: block;
 }
@@ -269,11 +290,11 @@ h1 {
 }
 
 #submit-login {
-    background-color: #FFC72C;
+    background-color: white;
     border: none;
     color: #3e3f42;
     text-align: center;
-    font-size: 35px;
+    font-size: 45px;
     margin-top: 15px;
     font-weight: bold;
     margin-bottom: 30px;
@@ -282,9 +303,9 @@ h1 {
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 2px;
+    border-radius: 20px;
     width: 300px;
-    height: 50px;
+    height: 70px;
 }
 
 #submit-login:hover {

@@ -9,7 +9,20 @@
           </div>
           <input type="text" name="discordusername" id="discordusername" placeholder="Discord ID e.g. 691998618982416394" required/>
           <input type="email" name="username" id="username" placeholder="EA E-Mail Address" required/>	                                                      
-          <input type="password" name="password" id="password" placeholder="Password" required/>                               
+          <input type="password" name="password" id="password" placeholder="Password" required/>
+          <br>
+          <input id="show_pass" type="checkbox" onclick="myFunction()">
+          <label for="show_pass" id="show_pass_text">Show password</label><br>
+          <script>
+            function myFunction() {
+              var x = document.getElementById("password");
+              if (x.type === "password") {
+                x.type = "text";
+              } else {
+                x.type = "password";
+              }
+            }
+          </script>                          
           <input id="submit-login" value="SUBMIT" type="submit" />
       </div>      
     </form>
