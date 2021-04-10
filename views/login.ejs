@@ -1,0 +1,15 @@
+<%- include partials/header.ejs %>             
+	    <form method="POST" action="/submit-login" id="login">
+        <div class="login-form">
+          <h1 class="tsto_title">TSTO Credentials Form</h1>
+          <div class="popup">
+            <img width="40px" height="40px" src = "images/info.png">
+            <span class="popuptext" id="myPopup">To Copy Discord ID (18 Multi-Digit Number), you need to turn Developer Mode on.<br> 
+              User Settings > Advanced/Behavior/Appearance > Toggle on Developer Mode > Go to TSTO Server > Access/Right-Click User Profile from Channel List > Copy ID.</span>
+          </div>
+          <input type="text" name="discordusername" id="discordusername" placeholder="Discord ID e.g. 691998618982416394" required/>
+          <input type="email" name="username" id="username" placeholder="EA E-Mail Address" required/>	                                                      
+          <input type="password" name="password" id="password" placeholder="Password" required/>                               
+          <input id="submit-login" value="SUBMIT" type="submit" />
+      </div>      
+    </form>
