@@ -90,6 +90,7 @@ input[type=checkbox]
 #show_pass{
     margin-top: 30px;
     margin-right: 15px;
+    margin-bottom: 100px;
 }
 
 #show_pass_text{
