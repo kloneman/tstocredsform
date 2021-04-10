@@ -12,9 +12,6 @@ var session         = require("express-session");
 //Initalizing the express app
 var app = express();
 
-//Node TLS Stuff
-process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
-
 //Setting the body parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
