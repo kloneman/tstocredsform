@@ -56,4 +56,7 @@ app.post("/submit-login", function (req, res, next) {
 });
 
 //Local port to connect to the node app
-app.listen();
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
