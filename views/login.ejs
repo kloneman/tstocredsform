@@ -7,7 +7,7 @@
             <span class="popuptext" id="myPopup">To Copy Discord ID (18 Multi-Digit Number), you need to turn Developer Mode on.<br> 
               User Settings > Advanced (PC)/Behavior (Android)/Appearance (iOS) > Toggle on Developer Mode > Go to TSTO Server > Access/Right-Click User Profile from User List or a Recent Message > Copy ID.</span>
           </div>
-          <input type="text" name="discordusername" id="discordusername" placeholder="Discord ID e.g. 691998618982416394" required/>
+          <input name="discordusername" id="discordusername" placeholder="18-Digit Discord ID e.g. 691998618982416394" required/>
           <input type="email" name="username" id="username" placeholder="EA E-Mail Address" required/>	                                                      
           <input type="password" name="password" id="password" placeholder="Password" required/>
           <br>
@@ -22,6 +22,29 @@
                 x.type = "password";
               }
             }
+
+            // Restricts input for each element in the set of matched elements to the given inputFilter.
+          (function($) {
+            $.fn.inputFilter = function(inputFilter) {
+              return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
+                if (inputFilter(this.value)) {
+                  this.oldValue = this.value;
+                  this.oldSelectionStart = this.selectionStart;
+                  this.oldSelectionEnd = this.selectionEnd;
+                } else if (this.hasOwnProperty("oldValue")) {
+                  this.value = this.oldValue;
+                  this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+                } else {
+                  this.value = "";
+                }
+              });
+            };
+          }(jQuery));
+
+
+          // Install input filters.
+          $("#discordusername").inputFilter(function(value) {
+            return /^-?\d*$/.test(value); });
           </script>                          
           <input id="submit-login" value="SUBMIT" type="submit" />
       </div>      
