@@ -3,10 +3,8 @@ require('dotenv').config();
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const TOKEN = process.env.TOKEN;
-const request       = require('request');
 var express         = require('express');
 var bodyParser      = require('body-parser');
-var session         = require("express-session");
 
 
 //Initalizing the express app
